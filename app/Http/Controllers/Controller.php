@@ -17,6 +17,6 @@ class Controller
             $template = str_replace('.', '/', $template);
         }
 
-        return $twig->render($template . '.html');
+        return $twig->render($template . '.twig');
     }
 }

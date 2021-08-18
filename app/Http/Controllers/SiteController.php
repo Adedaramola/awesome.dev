@@ -8,4 +8,14 @@ class SiteController extends Controller
     {
         return $this->view('index');
     }
+
+    public function resume()
+    {
+        return $this->view('resume');
+    }
+
+    public function notFound()
+    {
+        
+    }
 }

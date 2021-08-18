@@ -1,0 +1,47 @@
+{% extends "layouts/app.twig" %} {% block title %}Home{% endblock %} {% block
+content %}
+<section class="home-flex">
+    <div class="home-intro">
+        <h2 class="banner-header">Hello, I'm Adedaramola Adetimehin.</h2>
+        <p class="banner-text">
+            I'm a Backend software developer, passionate about building
+            <span>functional</span> and <span>scalable</span> web applications
+            with a futuristic mindset and also user experience as a top
+            priority.
+        </p>
+        <div class="banner-links">
+            <a href="#" class="banner-link">Contact</a>
+            <a href="/resume" id="resume" class="banner-link">Resume</a>
+        </div>
+
+        <div class="link-group">
+            <div class="link">
+                <span>01</span>
+                <span class="link-line"></span>
+                <span><a href="#">Twitter</a></span>
+            </div>
+            <div class="link">
+                <span>02</span>
+                <span class="link-line"></span>
+                <span><a href="https://github.com/adedaramola">Github</a></span>
+            </div>
+        </div>
+
+        <div class="sponsored-links">
+            <div class="sponsored-header">Sponsored by</div>
+            <div class="flex">
+                <a href="https://hng.tech">
+                    <img class="brand-image" src="images/brand-logo.png" alt="hng_logo" />
+                </a>
+                <a href="https://ingressive.org">
+                    <img class="brand-image" src="images/I4G-Logo-Color-Cropped.png" alt="i4g_logo" />
+                </a>
+                <a href="https://zuri.team">
+                    <img class="brand-image" src="images/zuri-logo-full.svg" alt="zuri_logo" />
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="resume-flex">{% include "template/resume.twig" %}</div>
+</section>
+{% endblock %}
