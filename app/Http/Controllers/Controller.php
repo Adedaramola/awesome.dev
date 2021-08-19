@@ -9,7 +9,7 @@ class Controller
 {
     public function view($template)
     {
-        $templateDir = dirname(__DIR__) . '../../../views';
+        $templateDir = dirname(__DIR__) . '/../../views';
         $loader = new FilesystemLoader($templateDir);
         $twig = new Environment($loader);
 
