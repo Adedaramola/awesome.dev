@@ -4,15 +4,16 @@ namespace App;
 
 class Database
 {
-    public $PATH_TO_SQLITE_DB = __DIR__ . '/../database/database.sqlite';
 
     private $pdo;
 
     public function connect()
     {
+        $databasePath = dirname(__DIR__) . '/database/database.sqlite';
+
         if ($this->pdo == null) {
             try {
-                $this->pdo = new \PDO("sqlite:" . $this->PATH_TO_SQLITE_DB);
+                $this->pdo = new \PDO("sqlite:" . $databasePath);
             } catch (\PDOException $e) {
                 $e->getMessage();
             }
