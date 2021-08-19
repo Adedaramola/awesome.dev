@@ -7,7 +7,7 @@ use Twig\Loader\FilesystemLoader;
 
 class Controller
 {
-    public function view($template)
+    public function view($template, $data = [])
     {
         $templateDir = dirname(__DIR__) . '/../../views';
         $loader = new FilesystemLoader($templateDir);
@@ -17,6 +17,6 @@ class Controller
             $template = str_replace('.', '/', $template);
         }
 
-        return $twig->render($template . '.twig');
+        return $twig->render($template . '.twig', $data);
     }
 }

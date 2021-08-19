@@ -1,0 +1,41 @@
+{% extends "layouts/app.twig" %} {% block title %}Contact me{% endblock %} {%
+block content %}
+
+<div class="banner-links" style="margin-top: 3em">
+    <a href="/" class="banner-link">Back Home</a>
+</div>
+
+<div class="contact-form-container">
+    {% if error %}
+    <div style="color: red">{{ error }}</div>
+    {% endif %} {% if success %}
+    <div style="color: green">{{ success }}</div>
+    {% endif %}
+    <form action="/contact-me" method="POST" class="contact-form">
+        <!-- <input type="hidden" name="csrf_token" value="<?= csrf_token(); ?>" /> -->
+        <div>
+            <label for="name" class="contact-label">Your Name</label>
+            <input type="text" name="name" class="contact-input" required />
+        </div>
+        <div>
+            <label for="email" class="contact-label">Your Email address</label>
+            <input type="email" name="email" class="contact-input" required />
+        </div>
+        <div>
+            <label for="message" class="contact-label"
+                >What do you wanna say?</label
+            >
+            <textarea
+                name="message"
+                class="contact-input"
+                cols="30"
+                rows="6"
+                placeholder="Soro soke my dear!"
+                required
+            ></textarea>
+        </div>
+        <button type="submit" name="send" class="contact-btn">Send</button>
+    </form>
+</div>
+
+{% endblock %}
