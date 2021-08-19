@@ -9,7 +9,7 @@ class Database
 
     public function connect()
     {
-        $databasePath = dirname(__DIR__) . '/database/database.sqlite';
+        $databasePath = __DIR__ . '/../database/database.sqlite';
 
         if ($this->pdo == null) {
             try {
